@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
 
-function getStatistics(): number {
+function getStatistics(): {meanAge: number, meanHeight: number} {
   const persons: {"age": number, "height": number}[] = JSON.parse(readFileSync("./persons.json").toString());
 
   let maxAge: number = 0;
